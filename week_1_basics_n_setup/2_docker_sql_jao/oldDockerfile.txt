@@ -1,0 +1,14 @@
+#image to be based on
+FROM python:3.9
+
+#install packages inside container and create new image
+RUN pip install pandas
+
+#specifying a directory to copy file.  *directory will be created and navigated to same.
+WORKDIR /app
+
+#copy file into directory (source/destination) (same name in this case)
+COPY pipeline.py pipeline.py				
+
+#start docker image with bash prompt
+ENTRYPOINT [ "python", "pipeline.py" ]

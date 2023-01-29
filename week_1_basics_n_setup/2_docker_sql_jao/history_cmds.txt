@@ -1,0 +1,338 @@
+    1  htop
+    2  gcloud
+    3  gcloud version
+    4  gcloud --version
+    5  wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+    6  bash Anaconda3-2022.10-Linux-x86_64.sh 
+    7  ll
+    8  vi .bashrc 
+    9  ll
+   10  pwd
+   11  python
+   12  docker
+   13  sudo apt-get install docker.io
+   14  exit
+   15  ll
+   16  exit
+   17  docker
+   18  htop
+   19  sudo apt-get update
+   20  ll
+   21  ls
+   22  sudo apt-get install docker.io
+   23  ls
+   24  git clone https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+   25  ls
+   26  docker run hello-world
+   27  ll
+   28  sudo groupadd docker
+   29  sudo gpasswd -a $USER docker
+   30  sudo service docker restart
+   31  docker run hello-world
+   32  docker run -it ubuntu bash
+   33  wget ls
+   34  ls
+   35  mkdir bin
+   36  cd bin/
+   37  ll
+   38  wget https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64
+   39  ll
+   40  ls
+   41  cd ..
+   42  ll
+   43  ls
+   44  rm -rf bin/
+   45  ls
+   46  mkdir bin
+   47  ls
+   48  cd bin/
+   49  wget 
+   50  wget https://github.com/docker/compose/releases/download/v2.2.3/docker-compose-linux-x86_64 -O docker-compose
+   51  ls
+   52  chmod +x docker-compose 
+   53  ll
+   54  ls
+   55  ./docker-compose version
+   56  cd
+   57  pwd
+   58  nano .bashrc 
+   59  cat .bashrc 
+   60  source .bashrc 
+   61  ll
+   62  nano .bashrc 
+   63  which docker
+   64  pwd
+   65  ls
+   66  ll bin/
+   67  nano .bashrc 
+   68  which docker
+   69  which docker-compose
+   70  nano .bashrc 
+   71  ll
+   72  ls
+   73  which docker-compose
+   74  docker-compose version
+   75  ls
+   76  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql/
+   77  ls
+   78  ll
+   79  tail -f docker-compose.yaml 
+   80  cat docker-compose.yaml 
+   81  clear
+   82  cat docker-compose.yaml 
+   83  docker ps
+   84  docker-compose up -d
+   85  docker ps
+   86  cd
+   87  clear
+   88  pip install pgcli
+   89  pgcli -h localhost -U root -d ny_taxi
+   90  pwd
+   91  ll
+   92  ls
+   93  docker ps
+   94  pgcli -h localhost -U root -d ny_taxi
+   95  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql/
+   96  ll
+   97  docker run hello-world
+   98  docker run -it ubuntu bash
+   99  docker version
+  100  docker --version
+  101  docker run -it python:3.9
+  102  docker run -it --entrypoint=bash python:3.9
+  103  docker ps
+  104  docker run -it --entrypoint=bash python:3.9
+  105  pwd
+  106  ls
+  107  cd data-engineering-zoomcamp/
+  108  cd week_1_basics_n_setup/
+  109  ll
+  110  cd 2_docker_sql/
+  111  ll
+  112  cd ..
+  113  mkdir 2_docker_sql_jao
+  114  cd 2_docker_sql_jao/
+  115  ll
+  116  ls
+  117  touch Dockerfile
+  118  nano Dockerfile 
+  119  cat Dockerfile 
+  120  nano Dockerfile 
+  121  cat Dockerfile 
+  122  docker build -t test_jao .
+  123  ls
+  124  nano Dockerfile 
+  125  docker run 
+  126  ls
+  127  docker ps
+  128  docker run -it test_jao
+  129  ls
+  130  docker build -t test_jao .
+  131  docker run -it test_jao
+  132  docker build -t test_jao .
+  133  docker run -it test_jao
+  134  docker build -t test_jao .
+  135  docker run -it test_jao
+  136  docker build -t test_jao .
+  137  docker run -it test_jao
+  138  docker build -t test_jao .
+  139  docker run -it test_jao
+  140  docker build -t test_jao .
+  141  docker run -it test_jao
+  142  docker build -t test_jao .
+  143  docker run -it test_jao
+  144  docker build -t test_jao . 2023-01-22
+  145  docker build -t test_jao 2023-01-22
+  146  docker build -t test_jao
+  147  docker build -t test_jao .
+  148  docker run -it test_jao 2023-01-22
+  149  docker build -t test_jao .
+  150  docker run -it test_jao 2023-01-22
+  151  docker run -it test_jao 2023-01-22 123 JAO
+  152  docker build -t test_jao .
+  153  docker run -it test_jao 2023-01-22 123 JAO
+  154  cat .bashrc 
+  155  ls
+  156  docker ps
+  157  pgcli -h localhost -U root -d ny_taxi
+  158  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  159  docker ps
+  160  ls
+  161  docker ps
+  162  cd ny_taxi_postgres_data/
+  163  ls
+  164  pgcli -h localhost -U root -d ny_taxi
+  165  docker-compose up -d
+  166  docker ps
+  167  pgcli -h localhost -U root -d ny_taxi
+  168  docker ps
+  169  cd ..
+  170  pgcli -h localhost -U root -d ny_taxi
+  171  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  172  ll
+  173  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+  174  ls
+  175  ll
+  176  pgcli -h localhost -U root -d ny_taxi
+  177  ls
+  178  gzip -d yellow_tripdata_2021-01.csv.gz 
+  179  ls
+  180  pgcli -h localhost -U root -d ny_taxi
+  181  sudo apt-get install libpq-dev
+  182  pgcli -h localhost -U root -d ny_taxi
+  183  docker ps
+  184  pgcli -h localhost -U root -d ny_taxi
+  185  docker ps
+  186  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  187  ll
+  188  cat upload-data.ipynb 
+  189  clear
+  190  jupyter notebook
+  191  pgcli -h localhost -U root -d ny_taxi
+  192  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  193  jupyter notebook
+  194  pip install sqlalchemy psycopg2-binary 
+  195  jupyter notebook
+  196  ls
+  197  ls data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  198  pgcli -h localhost -U root -d ny_taxi
+  199  cd bin/
+  200  ls
+  201  wget 
+  202  wget https://releases.hashicorp.com/terraform/1.1.9/terraform_1.1.9_linux_amd64.zip
+  203  ls
+  204  sudo apt-get install unzip
+  205  ls
+  206  unzip terraform_1.1.9_linux_amd64.zip 
+  207  ls
+  208  rm -f terraform_1.1.9_linux_amd64.zip 
+  209  ls
+  210  cd 
+  211  terraform -version
+  212  gcloud
+  213  gcloud -v
+  214  ll
+  215  ll .gcp/
+  216  cd .gcp/
+  217  ls
+  218  rm -rf ny-rides-share-jao-c0eec73ca433.json 
+  219  cd ..
+  220  cd .gcp/
+  221  ls
+  222  cd ..
+  223  cd data-engineering-zoomcamp/
+  224  cd ~
+  225  pwd
+  226  ls
+  227  cd .gcp/
+  228  ls
+  229  cd ~
+  230  ls
+  231  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao.json 
+  232  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+  233  terraform init
+  234  cd data-engineering-zoomcamp/
+  235  ls
+  236  cd week_1_basics_n_setup/
+  237  ls
+  238  cd ~
+  239  cd bin/
+  240  ls
+  241  cd ~
+  242  ls
+  243  nano .bashrc 
+  244  ll
+  245  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+  246  ll
+  247  mkdir 1_terraform_gcp_jao
+  248  cd 1_terraform_gcp_jao/
+  249  mkdir terraform
+  250  cd terraform/
+  251  ls
+  252  ll
+  253  terraform init
+  254  terraform plan
+  255  terraform plan -var="project=ny-rides-share-jao"
+  256  cd ~
+  257  ll
+  258  .terraform.d/
+  259  cd .terraform.d/
+  260  ll
+  261  cd ~
+  262  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/terraform/
+  263  terraform init
+  264  touch main.tf
+  265  touch variables.tf
+  266  touch .tfstate
+  267  ls
+  268  ll
+  269  terraform init
+  270  terraform plan
+  271  ls
+  272  ;;
+  273  ll
+  274  cat main.tf 
+  275  cat variables.tf 
+  276  cat .tfstate 
+  277  rm -rf *
+  278  ll
+  279  rm .tfstate 
+  280  ls
+  281  ll
+  282  touch .terraform-version
+  283  ll
+  284  terraform -version
+  285  nano .terraform-version 
+  286  ll
+  287  touch variables.tf
+  288  rm -rf variables.tf 
+  289  ls
+  290  touch main.tf
+  291  terraform plan
+  292  terraform init
+  293  terraform plan
+  294  terraform init
+  295  terraform plan
+  296  cd ~
+  297  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/terraform/
+  298  ll
+  299  cd ..
+  300  rm -f terraform/
+  301  rm -rf terraform/
+  302  ll
+  303  mkdir terraform
+  304  ll
+  305  cd terraform/
+  306  terraform inti
+  307  terraform init
+  308  touch .terraform-version
+  309  terraform version
+  310  nano .terraform-version 
+  311  touch main.tf
+  312  touch variables.tf
+  313  terraform init
+  314  terraform plan
+  315  terraform apply
+  316  cd ..
+  317  rm -rf 1_terraform_gcp_jao/
+  318  ll
+  319  cd 1_terraform_gcp/terraform/
+  320  ll
+  321  terraform init
+  322  terraform plan
+  323  terraform apply
+  324  terraform destroy
+  325  sudo shutdown now
+  326  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  327  ls
+  328  ll
+  329  docker build -t test_jao .
+  330  docker run -it test_jao
+  331  docker run -it test_jao 2023-01-23
+  332  docker
+  333  docker version
+  334  pgcli -h localhost -U root -d ny_taxi
+  335  docker ps
+  336  cd ..
+  337  cd ~
+  338  history > history_cmds.txt
