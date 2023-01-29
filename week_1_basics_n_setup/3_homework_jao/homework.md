@@ -21,6 +21,7 @@ Which tag has the following text? - *Write the image ID to the file*
 
 ## Answer 1
 run:    docker build --help
+
 result: --iidfile string          Write the image ID to the file
 
 
@@ -37,7 +38,9 @@ How many python packages/modules are installed?
 
 ## Answer 2
 run:        docker run -it --entrypoint=bash python:3.9
+
 run:        pip list
+
 result:     3
 
 
@@ -70,9 +73,9 @@ Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in 
 
 ## Answer 3
 run: ```
-        select count(index), count(distinct index)
-        from green_taxi_data
-        where lpep_pickup_datetime::date = '2019-01-15'
+        select count(index), count(distinct index) \
+        from green_taxi_data \
+        where lpep_pickup_datetime::date = '2019-01-15' \
 		and lpep_dropoff_datetime::date = '2019-01-15'
     ```
 
