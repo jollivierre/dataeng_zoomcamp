@@ -37,9 +37,11 @@ How many python packages/modules are installed?
 - 7
 
 ## Answer 2
-run:        docker run -it --entrypoint=bash python:3.9
-
+run:
+```bash
+docker run -it --entrypoint=bash python:3.9
 run:        pip list
+```
 
 result:     3
 
@@ -72,12 +74,13 @@ Remember that `lpep_pickup_datetime` and `lpep_dropoff_datetime` columns are in 
 - 21090
 
 ## Answer 3
-run: ```
-        select count(index), count(distinct index) \
-        from green_taxi_data \
-        where lpep_pickup_datetime::date = '2019-01-15' \
-		and lpep_dropoff_datetime::date = '2019-01-15'
-    ```
+run: 
+```sql
+select count(index), count(distinct index) \
+from green_taxi_data \
+where lpep_pickup_datetime::date = '2019-01-15' \
+and lpep_dropoff_datetime::date = '2019-01-15'
+```
 
 result: 20530
 
@@ -94,13 +97,14 @@ Use the pick up time for your calculations.
 
 
 ## Answer 4
-run:    ```
-        select lpep_pickup_datetime::date, sum(trip_distance)
-        from green_taxi_data
-        where lpep_pickup_datetime::date in ('2019-01-18', '2019-01-28', '2019-01-15', '2019-01-10')
-        group by 1
-        order by 2 desc
-        ```
+run:    
+```sql
+select lpep_pickup_datetime::date, sum(trip_distance)
+from green_taxi_data
+where lpep_pickup_datetime::date in ('2019-01-18', '2019-01-28', '2019-01-15', '2019-01-10')
+group by 1
+order by 2 desc
+```
 
 result: 2019-01-10
 
@@ -118,15 +122,16 @@ In 2019-01-01 how many trips had 2 and 3 passengers?
 
 
 ## Answer 5
-run:    ```
-        select passenger_count, count(index), count(distinct index)
-        from green_taxi_data
-        where lpep_pickup_datetime::date = '2019-01-01'
-		--and lpep_dropoff_datetime::date = '2019-01-01'
-		and passenger_count in (2,3)
-		group by 1
-		order by 1
-        ```
+run:    
+```sql
+select passenger_count, count(index), count(distinct index)
+from green_taxi_data
+where lpep_pickup_datetime::date = '2019-01-01'
+--and lpep_dropoff_datetime::date = '2019-01-01'
+and passenger_count in (2,3)
+group by 1
+order by 1
+```
 
 
 
@@ -147,22 +152,23 @@ Note: it's not a typo, it's `tip` , not `trip`
 
 
 ## Answer 6
-run:        ```
-            select gtd."index"
-                , gtd."PULocationID"
-                , zpu."Zone" as "PickUpZone"
-                , gtd."DOLocationID"
-                , zdo."Zone" as "DropOffZone"
-                , gtd.tip_amount
-            from green_taxi_data gtd
-            left outer join zones zpu
-                on gtd."PULocationID" = zpu."LocationID"
-            left outer join zones zdo
-                on gtd."DOLocationID" = zdo."LocationID"
-            where gtd."PULocationID" = 7
-            order by gtd.tip_amount desc
-            limit 10
-            ```
+run:        
+```sql
+select gtd."index"
+    , gtd."PULocationID"
+    , zpu."Zone" as "PickUpZone"
+    , gtd."DOLocationID"
+    , zdo."Zone" as "DropOffZone"
+    , gtd.tip_amount
+from green_taxi_data gtd
+left outer join zones zpu
+    on gtd."PULocationID" = zpu."LocationID"
+left outer join zones zdo
+    on gtd."DOLocationID" = zdo."LocationID"
+where gtd."PULocationID" = 7
+order by gtd.tip_amount desc
+limit 10
+```
 
 result:     Long Island City/Queens Plaza
 
