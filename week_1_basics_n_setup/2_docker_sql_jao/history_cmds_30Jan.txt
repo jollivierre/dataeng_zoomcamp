@@ -1,0 +1,1000 @@
+  206  unzip terraform_1.1.9_linux_amd64.zip 
+  207  ls
+  208  rm -f terraform_1.1.9_linux_amd64.zip 
+  209  ls
+  210  cd 
+  211  terraform -version
+  212  gcloud
+  213  gcloud -v
+  214  ll
+  215  ll .gcp/
+  216  cd .gcp/
+  217  ls
+  218  rm -rf ny-rides-share-jao-c0eec73ca433.json 
+  219  cd ..
+  220  cd .gcp/
+  221  ls
+  222  cd ..
+  223  cd data-engineering-zoomcamp/
+  224  cd ~
+  225  pwd
+  226  ls
+  227  cd .gcp/
+  228  ls
+  229  cd ~
+  230  ls
+  231  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao.json 
+  232  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+  233  terraform init
+  234  cd data-engineering-zoomcamp/
+  235  ls
+  236  cd week_1_basics_n_setup/
+  237  ls
+  238  cd ~
+  239  cd bin/
+  240  ls
+  241  cd ~
+  242  ls
+  243  nano .bashrc 
+  244  ll
+  245  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+  246  ll
+  247  mkdir 1_terraform_gcp_jao
+  248  cd 1_terraform_gcp_jao/
+  249  mkdir terraform
+  250  cd terraform/
+  251  ls
+  252  ll
+  253  terraform init
+  254  terraform plan
+  255  terraform plan -var="project=ny-rides-share-jao"
+  256  cd ~
+  257  ll
+  258  .terraform.d/
+  259  cd .terraform.d/
+  260  ll
+  261  cd ~
+  262  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/terraform/
+  263  terraform init
+  264  touch main.tf
+  265  touch variables.tf
+  266  touch .tfstate
+  267  ls
+  268  ll
+  269  terraform init
+  270  terraform plan
+  271  ls
+  272  ;;
+  273  ll
+  274  cat main.tf 
+  275  cat variables.tf 
+  276  cat .tfstate 
+  277  rm -rf *
+  278  ll
+  279  rm .tfstate 
+  280  ls
+  281  ll
+  282  touch .terraform-version
+  283  ll
+  284  terraform -version
+  285  nano .terraform-version 
+  286  ll
+  287  touch variables.tf
+  288  rm -rf variables.tf 
+  289  ls
+  290  touch main.tf
+  291  terraform plan
+  292  terraform init
+  293  terraform plan
+  294  terraform init
+  295  terraform plan
+  296  cd ~
+  297  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/terraform/
+  298  ll
+  299  cd ..
+  300  rm -f terraform/
+  301  rm -rf terraform/
+  302  ll
+  303  mkdir terraform
+  304  ll
+  305  cd terraform/
+  306  terraform inti
+  307  terraform init
+  308  touch .terraform-version
+  309  terraform version
+  310  nano .terraform-version 
+  311  touch main.tf
+  312  touch variables.tf
+  313  terraform init
+  314  terraform plan
+  315  terraform apply
+  316  cd ..
+  317  rm -rf 1_terraform_gcp_jao/
+  318  ll
+  319  cd 1_terraform_gcp/terraform/
+  320  ll
+  321  terraform init
+  322  terraform plan
+  323  terraform apply
+  324  terraform destroy
+  325  sudo shutdown now
+  326  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  327  ll
+  328  pgcli -h localhost -p 5432 -u root -d ny_taxi
+  329  htop
+  330  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+  331  ll
+  332  cd 2_docker_sql_jao/
+  333  ll
+  334  jupyter notebook
+  335  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  336  ls
+  337  ll
+  338  docker build -t test_jao .
+  339  docker run -it test_jao
+  340  docker run -it test_jao 2023-01-23
+  341  docker
+  342  docker version
+  343  pgcli -h localhost -U root -d ny_taxi
+  344  docker ps
+  345  cd ..
+  346  cd ~
+  347  history > history_cmds.txt
+  348  ls
+  349  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  350  mv ../../../history_cmds.txt .
+  351  ls
+  352  cd ..
+  353  cd 2_docker_sql
+  354  ls
+  355  docker-compose up -d
+  356  pgcli -h localhost -U root -d ny_taxi
+  357  pwd
+  358  cd ../2_docker_sql_jao/
+  359  ll
+  360  pwd
+  361  docker ps
+  362  docker kill 7ef5a92e50d9
+  363  docker ps
+  364  docker kill fb3636ce2a35
+  365  docker ps
+  366  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+  367  docker ps
+  368  pgcli -h localhost -U root -d ny_taxi
+  369  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  370  ll
+  371  jupyter notebook
+  372  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+  373  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  374  jupyter notebook
+  375  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  376  pgcli -h localhost -U root -d ny_taxi
+  377  pgcli -h localhost -U root -d ny_taxi
+  378  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  379  ls
+  380  pgcli -h localhost -U root -d ny_taxi
+  381  jupyter notebook
+  382  pgcli -h localhost -U root -d ny_taxi
+  383  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
+  384  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  385  ls
+  386  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
+  387  docker-compose up -d
+  388  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
+  389  docker ps
+  390  docker run -it   -e PGADMIN_DEFAULT_EMAIL=admin@admin.com   -e PGADMIN_DEFAULT_PASSWORD=root   -p 8080:80   dpage/pgadmin
+  391  docker ps
+  392  docker kill 063888b4107b
+  393  docker kill fb3636ce2a35
+  394  docker ps
+  395  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin4
+  396  docker network create postgres-network
+  397  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database
+  398  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+  399  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database
+  400  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
+  401  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database   postgres:13
+  402  docker ps -a
+  403  docker build postgres-pgadmin
+  404  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  405  docker kill 29ceddeafdd8
+  406  docker-compose up -d postgres-pdadmin
+  407  docker start postgres-database
+  408  docker ps
+  409  docker start postgres-pgadmin
+  410  docker ps
+  411  pgcli -h localhost -U root -d ny_taxi
+  412  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  413  ll
+  414  jupyter nbconvert --to=script upload_yellow_taxi_data.ipynb 
+  415  ll
+  416  docker ps
+  417  docker ps -a
+  418  pgcli -h localhost -U root -d ny_taxi
+  419  docker run -it postgres-pgadmin
+  420  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database   postgres:13
+  421  docker run -it  --name postgres-database   postgres:13
+  422  docker run -it  postgres:13
+  423  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root" --name postgres-database   postgres:13
+  424  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  425  ll
+  426  jupyter notebook
+  427  docker ps
+  428  docker stop postgres-pgadmin
+  429  docker ps
+  430  docker ps -a
+  431  docker start b361e95e784f
+  432  docker ps -a
+  433  docker ps
+  434  docker start 29ceddeafdd8
+  435  docker ps
+  436  pgcli -h localhost -U root -d ny_taxi
+  437  URL=https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+  438  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
+  439  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  440  ll
+  441  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
+  442  URL='https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
+  443  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
+  444  URL='https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/yellow/yellow_tripdata_2021-01.csv.gz'
+  445  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
+  446  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/yellow/yellow_tripdata_2021-01.csv.gz
+  447  ls
+  448  rm -rf yellow_tripdata_2021-01.csv.gz 
+  449  move yellow_tripdata_2021-01.csv yellow_tripdata_2021-01.csv_backup 
+  450  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+  451  ls
+  452  rm -f yellow_tripdata_2021-01.csv.gz 
+  453  ls
+  454  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  455  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
+  456  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  457  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  458  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  459  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  460  ls
+  461  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  462  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  463  ls
+  464  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz -O output.csv
+  465  ls
+  466  cat output.csv 
+  467  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  468  jupyter notebook
+  469  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  470  jupyter notebook
+  471  pgcli -h localhost -U root -d ny_taxi
+  472  cd
+  473  pgcli -h localhost -U root -d ny_taxi
+  474  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  475  ls
+  476  rm -rf output.csv 
+  477  head -3 yellow_tripdata_2021-01.csv.bu 
+  478  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz -O output.csv.gz
+  479  ls
+  480  head -3 output.csv.gz 
+  481  clear
+  482  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  483  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  484  ls
+  485  rm -rf output.csv.gz 
+  486  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  487  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  488  ls
+  489  rem -rf output.csv.gz 
+  490  rm -rf output.csv.gz 
+  491  ls
+  492  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  493  docker ps
+  494  docker ps -a
+  495  docker start 29ceddeafdd8
+  496  docker start 9e6a4c574bc1
+  497  docker ps
+  498  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  499  ls
+  500  rm -f output.csv.gz 
+  501  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  502  pgcli -h localhost -U root -d ny_taxi
+  503  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  504  pgcli -h localhost -U root -d ny_taxi
+  505  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  506  pgcli -h localhost -U root -d ny_taxi
+  507  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  508  pgcli -h localhost -U root -d ny_taxi
+  509  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  510  ls
+  511  ll
+  512  cd
+  513  ls
+  514  cd bin/
+  515  ll
+  516  cd ..
+  517  cd ny_taxi_postgres_data/
+  518  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
+  519  ls
+  520  cd ..
+  521  cd 2_docker_sql_jao/
+  522  ls
+  523  docker build - taxi_data_ingest:v001 .
+  524  docker build -t jao_taxi_data_ingest:v001 .
+  525  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  526  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  527  docker build -t test_jao .
+  528  ls
+  529  rm -rf output.csv.gz 
+  530  ls
+  531  docker ps
+  532  cd .
+  533  cd ..
+  534  cd 2_docker_sql
+  535  ls
+  536  cat Dockerfile 
+  537  ll
+  538  cd ..
+  539  cd 2_docker_sql_jao/
+  540  ls
+  541  docker build -t test_jao .
+  542  ls ny_taxi_postgres_data/
+  543  sudo ls ny_taxi_postgres_data/
+  544  ll
+  545  ls
+  546  ls ny_taxi_postgres_data/
+  547  sudo ls ny_taxi_postgres_data/
+  548  ll
+  549  touch .dockerignore
+  550  docker build -t test_jao .
+  551  mkdir data
+  552  ll
+  553  docker ps
+  554  docker build -t test_jao .
+  555  ll
+  556  docker ps
+  557  docker down
+  558  docker-compose down
+  559  docker ps
+  560  docker-compose down
+  561  docker kill 29ceddeafdd8
+  562  docker kill 9e6a4c574bc1
+  563  docker ps
+  564  ls
+  565  sudo rm -rf ny_taxi_postgres_data/
+  566  ls
+  567  docker-compose up -d
+  568  docker ps
+  569  ls
+  570  ll data/ny_taxi_postgres_data/
+  571  sudo ll data/ny_taxi_postgres_data/
+  572  sudo ls data/ny_taxi_postgres_data/
+  573  docker build - taxi_data_ingest:v001 .
+  574  docker build -t jao_taxi_data_ingest:v001 .
+  575  docker network ls
+  576  docker ps
+  577  docker-compose down
+  578  docker ps
+  579  docker ps -a
+  580  docker start 29ceddeafdd8
+  581  docker start 9e6a4c574bc1
+  582  docker ps
+  583  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  584  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
+  585  docker ps -a
+  586  docker rmi 04a9a487ed4c 183c0549d63c 2db6bce3b6f4 b361e95e784f
+  587  docker rmi 04a9a487ed4c
+  588  docker ps -a
+  589  docker rmi brave_euclid
+  590  docker ps
+  591  docker image rm -f 04a9a487ed4c
+  592  docker image rm -f jao_taxi_data_ingest:v001
+  593  docker ps
+  594  docker ps -a
+  595  docker rmi 04a9a487ed4c
+  596  docker rmi ad588c048f2b
+  597  docker image rm -f ad588c048f2b
+  598  docker build -t jao_taxi_data_ingest:v002 .
+  599  docker build -it jao_taxi_data_ingest:v002 .
+  600  docker ps
+  601  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=localhost     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  602  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  603  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=localhost     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  604  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  605  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  606  docker ps
+  607  ls
+  608  docker ps
+  609  docker-compose down
+  610  docker ps
+  611  docker stop postgres-pgadmin
+  612  docker stop postgres-database
+  613  docker -ps
+  614  docker ps
+  615  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  616  ll
+  617  history > history_cmds_27Jan.txt 
+  618  ll
+  619  docker ps -a
+  620  docker start postgres-pgadmin
+  621  docker start postgres-database
+  622  docker ps
+  623  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  624  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data \
+  625  ls
+  626  rm -rf output.csv.gz 
+  627  ls
+  628  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  629  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  630  docker-compose
+  631  ll
+  632  cd
+  633  ll
+  634  ls
+  635  cd bin/
+  636  ll
+  637  cd
+  638  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  639  ll
+  640  docker ps
+  641  docker stop postgres-pgadmin
+  642  docker stop postgres-database
+  643  docker ps
+  644  docker-compose up -d
+  645  docker ps
+  646  docker-compose down
+  647  docker ps
+  648  docker ps -a
+  649  docker-compose up -d
+  650  docker-compose down
+  651  docker-compose up -d
+  652  docker ps
+  653  docker-compose up -d
+  654  docker ps
+  655  ps
+  656  ;;
+  657  ll
+  658  docker ps
+  659  docker-compose down
+  660  docker start postgres-pgadmin
+  661  docker start postgres-database
+  662  docker ps
+  663  docker stop  postgres-pgadmin
+  664  docker stop postgres-database
+  665  docker ps
+  666  docker-compose up -d
+  667  docker ps
+  668  docker-compose down
+  669  docker-compose up
+  670  docker ps
+  671  docker start postgres-database
+  672  docker start postgres-pgadmin
+  673  docker-compose up -d
+  674  docker ps
+  675  docker stop  postgres-pgadmin
+  676  docker stop  postgres-database
+  677  docker ps
+  678  docker-compose up -d
+  679  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  680  ls
+  681  docker ps
+  682  docker-compose down
+  683  docker ps -a
+  684  docker ps
+  685  docker rmi b5c12f953318
+  686  docker rm -f b5c12f953318
+  687  docker rm -f 6f08d36005ed
+  688  docker ps -a
+  689  ls
+  690  ls data/ny_taxi_postgres_data/
+  691  sudo ls data/ny_taxi_postgres_data/
+  692  cd ./data/ny_taxi_postgres_data/
+  693  docker-compose up
+  694  docker ps
+  695  docker-compose up
+  696  docker-compose up -d
+  697  docker network ls
+  698  docker-compose down
+  699  docker network ls
+  700  docker-compose up -d
+  701  docker ps
+  702  docker network ls
+  703  docker-compose down
+  704  docker network ls
+  705  docker network rm 6e193b4cd5de
+  706  docker network ls
+  707  docker ps -a
+  708  docker rmi 2_docker_sql-pgdatabase-1
+  709  docker rmi 7ef5a92e50d9
+  710  docker rm 7ef5a92e50d9
+  711  docker rm fb3636ce2a35
+  712  docker ps -a
+  713  docker rm 04a9a487ed4c
+  714  docker rm 183c0549d63c
+  715  docker rm 2db6bce3b6f4
+  716  docker rm b361e95e784f
+  717  docker ps -a
+  718  docker-compose up -d
+  719  docker start postgres-pgadmin
+  720  docker start postgres-database
+  721  docker ps
+  722  ls
+  723  docker stop postgres-pgadmin 
+  724  docker stop postgres-database 
+  725  docker ps
+  726  docker-compose up -d
+  727  docker ps
+  728  docker ps -a
+  729  docker-compose down
+  730  docker ps -a
+  731  docker ps
+  732  docker-compose up -d
+  733  docker network ls
+  734  docker-compose up -d
+  735  docker ps -a
+  736  docker-compose down
+  737  docker ps -a
+  738  pgcli -h localhost -U root -d ny_taxi
+  739  docker start postgres-database 
+  740  docker start postgres-pgadmin 
+  741  pgcli -h localhost -U root -d ny_taxi
+  742  docker stop postgres-pgadmin 
+  743  docker stop postgres-database 
+  744  docker ps
+  745  docker-compose up -d
+  746  docker ps
+  747  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  748  docker ps
+  749  docker network ls
+  750  docker build -it jao_taxi_data_ingest:v002 .
+  751  ls
+  752  docker build -it jao_taxi_data_ingest:v002 .
+  753  docker build --help
+  754  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  755  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  756  docker ps
+  757  gcli -h localhost -U root -d ny_taxi
+  758  pgcli -h localhost -U root -d ny_taxi
+  759  docker-compose down
+  760  docker start postgres-database 
+  761  docker start postgres-pgadmin 
+  762  pgcli -h localhost -U root -d ny_taxi
+  763  docker ps
+  764  docker stop postgres-pgadmin 
+  765  docker stop postgres-database postgres-database postgres-database 
+  766  docker stop postgres-database 
+  767  docker ps
+  768  docker-compose up -d
+  769  docker ps
+  770  docker-compose up -d
+  771  pgcli -h localhost -U root -d ny_taxi
+  772  docker ps
+  773  docker-compose down
+  774  docker ps
+  775  ls
+  776  ll
+  777  docker-compose up -d
+  778  docker ps
+  779  docker-compose down
+  780  docker ps -a
+  781  docker-compose up -d
+  782  pgcli -h localhost -U root -d ny_taxi
+  783  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  784  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  785  docker ps
+  786  docker-compose down
+  787  docker-compose up -d
+  788  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  789  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  790  docker-compose down
+  791  docker-compose up -d
+  792  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+  793  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=yellow_taxi_data     --csv_url=${URL}
+  794  pgcli -h localhost -U root -d ny_taxi
+  795  docker ps
+  796  pgcli -h localhost -U root -d ny_taxi
+  797  docker start postgres-database 
+  798  docker-compose down
+  799  docker start postgres-database 
+  800  docker start postgres-pgadmin 
+  801  docker stop postgres-database 
+  802  docker stop postgres-pgadmin 
+  803  docker-compose up -d
+  804  docker ps
+  805  docker-compose down
+  806  docker-compose up -d
+  807  docker-compose down
+  808  docker-compose up -d
+  809  docker ps -a
+  810  docker ps
+  811  docker-compose down
+  812  docker start postgres-database 
+  813  pgcli -h localhost -U root -d ny_taxi
+  814  docker stop postgres-database 
+  815  docker-compose up -d
+  816  docker ps
+  817  docker-compose down
+  818  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_
+  819  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  820  ls
+  821  ll
+  822  ll ./data/ny_taxi_postgres_data/
+  823  sudo ll ./data/ny_taxi_postgres_data/
+  824  sudo ls ./data/ny_taxi_postgres_data/
+  825  docker-compose up -d
+  826  docker ps
+  827  docker-compose down
+  828  docker ps -a
+  829  docker-compose up -d
+  830  docker ps
+  831  pgcli -h localhost -U root -d ny_taxi
+  832  sudo ls ./data/pgadmin_data/
+  833  docker-compose down
+  834  docker ps
+  835  docker-compose up -d
+  836  sudo ls ./data/pgadmin_data/
+  837  docker-compose down
+  838  docker-compose up -d
+  839  ls
+  840  ll
+  841  cd data/
+  842  ll
+  843  docker-compose down
+  844  docker-compose up -d
+  845  sudo ls ./data/pgadmin_data/
+  846  cd ..
+  847  sudo ls ./data/pgadmin_data/
+  848  cd data/
+  849  ll
+  850  sudo ls ny_taxi_postgres_data/
+  851  sudo ls pgadmin_data/
+  852  cd ..
+  853  docker-compose down
+  854  docker-compose up -d
+  855  docker-compose down
+  856  docker-compose up -d
+  857  docker-compose down
+  858  docker-compose up -d
+  859  ping http://localhost:8080/browser/
+  860  ping http://localhost:8080
+  861  cd data/
+  862  ll
+  863  cd pgadmin_data/
+  864  cd ..
+  865  cd ny_taxi_postgres_data/
+  866  sudo cd ny_taxi_postgres_data/
+  867  docker-compose down
+  868  cd ..
+  869  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  870  docker ps -a
+  871  docker rm -f postgres-pgadmin
+  872  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  873  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"  -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  874  docker rm -f postgres-pgadmin
+  875  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"  -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  876  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_
+  877  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  878  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"  -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  879  docker ps
+  880  docker stop postgres-pgadmin 
+  881  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  882  docker ps
+  883  docker ps -a
+  884  docker rm -f postgres-pgadmin 
+  885  docker ps -a
+  886  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  887  docker ps
+  888  docker rm -f postgres-pgadmin
+  889  ll
+  890  cd data/
+  891  ll
+  892  cd ..
+  893  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin:rw   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  894  docker ps
+  895  docker ps -a
+  896  docker rm -f postgres-pgadmin
+  897  cd data/
+  898  ll
+  899  echo $(pwd)
+  900  ll
+  901  sudo chown -R root:root pgadmin_data/
+  902  ll
+  903  sudo chown -R 5050:5050 pgadmin_data/
+  904  ll
+  905  cd ..
+  906  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -v $(pwd)/data/pgadmin_data:/var/lib/pgadmin:rw   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
+  907  docker ps -a
+  908  docker ps
+  909  docker-compose up -d
+  910  sudo ls data/ny_taxi_postgres_data/
+  911  sudo ls data/pgadmin_data/
+  912  docker ps
+  913  docker-compose down
+  914  docker ps
+  915  docker-compose up -d
+  916  python
+  917  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  918  ll
+  919  docker ps
+  920  docker-compose down
+  921  docker start postgres-database 
+  922  docker start postgres-pgadmin 
+  923  pgcli -h localhost -U root -d ny_taxi
+  924  docker stop postgres-pgadmin 
+  925  docker stop postgres-database 
+  926  docker ps
+  927  docker-compose up -d
+  928  pgcli -h localhost -U root -d ny_taxi
+  929  docker-compose down
+  930  docker-compose up -d
+  931  jupyter notebook
+  932  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+  933  docker ps
+  934  docker ps -a
+  935  URL="wget https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+  936  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  937  ls
+  938  wget https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv
+  939  ls
+  940  ll
+  941  rm -rf taxi+_zone_lookup.csv 
+  942  URL="wget https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+  943  URL
+  944  ${URL}
+  945  echo ${URL}
+  946  rm -rf taxi+_zone_lookup.csv 
+  947  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  948  URL="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+  949  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  950  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-01.csv.gz"
+  951  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  952  ll
+  953  echo ${URL}
+  954  whet ${URL}
+  955  wget ${URL}
+  956  ll
+  957  gzip -d green_tripdata_2019-01.csv.gz 
+  958  ll
+  959  ls
+  960  ll
+  961  rm -f green_tripdata_2019-01.csv 
+  962  echo ${URL}
+  963  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  964  docker build -t jao_taxi_data_ingest:v003 .
+  965  docker -ps a
+  966  docker ps -a
+  967  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  968  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v002     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  969  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  970  docker build -t jao_taxi_data_ingest:v003 .
+  971  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  972  docker build -t jao_taxi_data_ingest:v003 .
+  973  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=green_taxi_data     --csv_url=${URL}
+  974  ll
+  975  wget https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv
+  976  ll
+  977  URL="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
+  978  echo ${URL}
+  979  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  980  docker build -t jao_taxi_data_ingest:v003 .
+  981  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  982  docker build -t jao_taxi_data_ingest:v003 .
+  983  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  984  docker build -t jao_taxi_data_ingest:v003 .
+  985  docker run -it   --network=postgres-network   jao_taxi_data_ingest:v003     --username=root     --password=root     --host=postgres-database     --port=5432     --database=ny_taxi     --tablename=zones     --csv_url=${URL}
+  986  docker build -t jao_taxi_data_ingest:v003 .
+  987  docker ps
+  988  docker-compose down
+  989  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+  990  ll
+  991  cd 1_terraform_gcp/
+  992  ll
+  993  cd ..
+  994  cd
+  995  ls
+  996  ll bin/
+  997  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+  998  cd
+  999  cat .bashrc 
+ 1000  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+ 1001  ll
+ 1002  mkdir 1_terraform_gcp_jao
+ 1003  cd 1_terraform_gcp_jao/
+ 1004  ll
+ 1005  cd ..
+ 1006  ll
+ 1007  cd 1_terraform_gcp
+ 1008  ll
+ 1009  cd .
+ 1010  ll
+ 1011  cd
+ 1012  ll
+ 1013  ll .gcp/
+ 1014  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1015  gcloud -v
+ 1016  echo GOOGLE_APPLICATION_CREDENTAILS
+ 1017  env
+ 1018  export
+ 1019  export -p
+ 1020  echo $GOOGLE_APPLICATION_CREDENTAILS
+ 1021  ~/.bashrc
+ 1022  cd
+ 1023  ~/.bashrc
+ 1024  source ~/.bashrc 
+ 1025  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1026  terraform -version
+ 1027  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1028  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao.json
+ 1029  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1030  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1031  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1032  touch de_terraform.md
+ 1033  nano de_terraform.md 
+ 1034  docker ps
+ 1035  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1036  ll
+ 1037  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1038  ll ~/.gcp/
+ 1039  cat ~/.gcp/ny-rides-share-jao.json 
+ 1040  cd ..
+ 1041  cd
+ 1042  cd .gcp/
+ 1043  ll
+ 1044  mv ny-rides-share-jao.json ny-rides-share-jao_470779890987.json 
+ 1045  cat ~/.gcp/ny-rides-share-jao_470779890987.json 
+ 1046  cd .gcp/
+ 1047  ll
+ 1048  mv ny-rides-share-jao-45d6850423a8.json ny-rides-share-jao-de-user.json 
+ 1049  ll
+ 1050  cat *
+ 1051  cd
+ 1052  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1053  ll
+ 1054  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao-de-user.json 
+ 1055  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1056  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1057  docker-compose up -d
+ 1058  cd ..
+ 1059  cd 2_docker_sql_jao/
+ 1060  ll
+ 1061  docker-compose up -d
+ 1062  docker-compose down
+ 1063  cd ../2_docker_sql_jao/
+ 1064  ll
+ 1065  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1066  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1067  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1068  ll
+ 1069  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1070  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao-de-user.json 
+ 1071  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1072  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1073  terraform -version
+ 1074  mkdir terraform
+ 1075  touch terraform/.terraform-version
+ 1076  nano terraform/.terraform-version
+ 1077  cat terraform/.terraform-version
+ 1078  ll
+ 1079  touch main.tf
+ 1080  cd data-engineering-zoomcamp/week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1081  ll
+ 1082  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1083  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao-de-user.json 
+ 1084  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1085  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1086  terraform init
+ 1087  ll
+ 1088  terraform plan
+ 1089  terraform apply
+ 1090  terraform destroy
+ 1091  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1092  cd ../2_docker_sql_jao/
+ 1093  ll
+ 1094  docker --help
+ 1095  docker build --help
+ 1096  docker run -it --entrypoint=bash python:3.9
+ 1097  docker ps
+ 1098  docker ps -a
+ 1099  docker-compose up -d
+ 1100  cd ..
+ 1101  cd
+ 1102  ll
+ 1103  tar -zcvf dataeng_29Jan2023.tar.gz data-engineering-zoomcamp
+ 1104  ll
+ 1105  cd data-engineering-zoomcamp/week_1_basics_n_setup/
+ 1106  ll
+ 1107  cd 2_docker_sql_jao/
+ 1108  ll
+ 1109  ll data/
+ 1110  cd
+ 1111  ll
+ 1112  cd .config/
+ 1113  ll
+ 1114  cd ..
+ 1115  cat .gitconfig 
+ 1116  cd .ssh/
+ 1117  ll
+ 1118  cat authorized_keys 
+ 1119  cd ..
+ 1120  cd .ssh/
+ 1121  ll
+ 1122  cat authorized_keys authorized_keys 
+ 1123  cd .
+ 1124  cd
+ 1125  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+ 1126  docker ps
+ 1127  docker-compose down
+ 1128  docker-compose up -d
+ 1129  docker-compose down
+ 1130  cd ../1_terraform_gcp_jao/
+ 1131  ll
+ 1132  terraform init
+ 1133  terraform plan
+ 1134  terraform apply
+ 1135  terraform destroy
+ 1136  ll
+ 1137  cd ../2_docker_sql
+ 1138  ll
+ 1139  cd ../2_docker_sql_jao/
+ 1140  ll
+ 1141  cd ..
+ 1142  cd 1_terraform_gcp_jao/
+ 1143  ll
+ 1144  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1145  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1146  terraform init
+ 1147  terraform plan -var="project=ny-rides-share-jao"
+ 1148  terraform apply -var="project=ny-rides-share-jao" | tee Terraform_Homework.txt
+ 1149  cat Terraform_Homework.txt 
+ 1150  terraform destroy
+ 1151  docker ps
+ 1152  git config --global user.name "Jason Ollivierre"
+ 1153  git config --global user.email j_ollivierre@yahoo.com
+ 1154  git remote add origin https://github.com/jollivierre/dataeng_zoomcamp.git
+ 1155  git remote add https://github.com/jollivierre/dataeng_zoomcamp.git
+ 1156  git remote -v
+ 1157  git remote set-url origin https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1158  git remote -v
+ 1159  git remote set-url --push origin https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1160  git remote -v
+ 1161  git remote set-url origin https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1162  git remote -v
+ 1163  git remote add origin https://github.com/jollivierre/dataeng_zoomcamp.git
+ 1164  git remote -v
+ 1165  git remote set-url origin https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1166  git remote -v
+ 1167  git branch -M main
+ 1168  git push -u origin main
+ 1169  git remote set-url origin https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1170  git remote set-url origin git@github.com:jollivierre/jollivierre/dataeng_zoomcamp.git
+ 1171  git remote -v
+ 1172  git remote set-url origin git@github.com:jollivierre/dataeng_zoomcamp.git
+ 1173  git remote -v
+ 1174  git config --global credential.helper wincred
+ 1175  git remote -v
+ 1176  git config --global --unset user.password
+ 1177  git remote -v
+ 1178  git remote rm JasonO
+ 1179  git remote -v
+ 1180  git remote rm JasonOll
+ 1181  git remote -v
+ 1182  git config --global --unset user.password
+ 1183  git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch week_1_basics_n_setup/2_docker_sql_jao/yellow_tripdata_2021-01.csv.bu' HEAD
+ 1184  git remote -v
+ 1185  git remote set-url --fetch  origin https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1186  git remote -v
+ 1187  git remote set-url origin https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1188  git remote -v
+ 1189  git remote set-url Jason  https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1190  git remote -v
+ 1191  git remote set-url --push Jason https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1192  git remote -v
+ 1193  git remote set-url Jason  https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1194  git remote -v
+ 1195  git remote set-url --push Jason https-//github.com/jollivierre/dataeng_zoomcamp.git
+ 1196  git remote -v
+ 1197  git remote set-url Jason https://github.com/DataTalksClub/data-engineering-zoomcamp.git
+ 1198  git remote -v
+ 1199  git remote set-url --push Jason https://github.com/jollivierre/dataeng_zoomcamp.git
+ 1200  git remote -v
+ 1201  git remote set-url --push origin https://github.com/jollivierre/dataeng_zoomcamp.git
+ 1202  git remote -v
+ 1203  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
+ 1204  ll
+ 1205  history > history_cmds_30Jan.txt 
