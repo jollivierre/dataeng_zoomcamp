@@ -60,24 +60,29 @@ def main(params):
     #simple while loop to import data 100K at a time
     #loop wiil run until no more rows to insert
     while True:
-        t_start = time()
+        try:
+            t_start = time()
         
-        df = next(df_iter)
-        
-        if 'tpep_pickup_datetime' in df.columns:
-            df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-        if 'tpep_dropoff_datetime' in df.columns:
-            df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
-        if 'lpep_pickup_datetime' in df.columns:
-            df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
-        if 'lpep_dropoff_datetime' in df.columns:
-            df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
-        
-        df.to_sql(name=tablename, con=engine, if_exists='append')
-        
-        t_end = time()
-        
-        print('inserted another', chunk_size, 'chunk....time taken: %.3f second' % (t_end - t_start))
+            df = next(df_iter)
+            
+            if 'tpep_pickup_datetime' in df.columns:
+                df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+            if 'tpep_dropoff_datetime' in df.columns:
+                df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+            if 'lpep_pickup_datetime' in df.columns:
+                df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
+            if 'lpep_dropoff_datetime' in df.columns:
+                df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
+            
+            df.to_sql(name=tablename, con=engine, if_exists='append')
+            
+            t_end = time()
+            
+            print('inserted another', chunk_size, 'chunk....time taken: %.3f second' % (t_end - t_start))
+
+        except StopIteration:
+            print('Finished ingesting data into postgres database')
+            break
 
 
 
