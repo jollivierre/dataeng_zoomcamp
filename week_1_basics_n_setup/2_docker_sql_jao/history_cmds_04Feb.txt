@@ -1,164 +1,3 @@
-  371  jupyter notebook
-  372  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
-  373  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  374  jupyter notebook
-  375  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
-  376  pgcli -h localhost -U root -d ny_taxi
-  377  pgcli -h localhost -U root -d ny_taxi
-  378  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  379  ls
-  380  pgcli -h localhost -U root -d ny_taxi
-  381  jupyter notebook
-  382  pgcli -h localhost -U root -d ny_taxi
-  383  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
-  384  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
-  385  ls
-  386  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
-  387  docker-compose up -d
-  388  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin
-  389  docker ps
-  390  docker run -it   -e PGADMIN_DEFAULT_EMAIL=admin@admin.com   -e PGADMIN_DEFAULT_PASSWORD=root   -p 8080:80   dpage/pgadmin
-  391  docker ps
-  392  docker kill 063888b4107b
-  393  docker kill fb3636ce2a35
-  394  docker ps
-  395  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   dpage/pgadmin4
-  396  docker network create postgres-network
-  397  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database
-  398  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
-  399  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database
-  400  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   postgres:13
-  401  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database   postgres:13
-  402  docker ps -a
-  403  docker build postgres-pgadmin
-  404  docker run -it   -e PGADMIN_DEFAULT_EMAIL="admin@admin.com"   -e PGADMIN_DEFAULT_PASSWORD="root"   -p 8080:80   --network=postgres-network   --name postgres-pgadmin   dpage/pgadmin4
-  405  docker kill 29ceddeafdd8
-  406  docker-compose up -d postgres-pdadmin
-  407  docker start postgres-database
-  408  docker ps
-  409  docker start postgres-pgadmin
-  410  docker ps
-  411  pgcli -h localhost -U root -d ny_taxi
-  412  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  413  ll
-  414  jupyter nbconvert --to=script upload_yellow_taxi_data.ipynb 
-  415  ll
-  416  docker ps
-  417  docker ps -a
-  418  pgcli -h localhost -U root -d ny_taxi
-  419  docker run -it postgres-pgadmin
-  420  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root"   -e POSTGRES_DB="ny_taxi"   -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data   -p 5432:5432   --network=postgres-network   --name postgres-database   postgres:13
-  421  docker run -it  --name postgres-database   postgres:13
-  422  docker run -it  postgres:13
-  423  docker run -it   -e POSTGRES_USER="root"   -e POSTGRES_PASSWORD="root" --name postgres-database   postgres:13
-  424  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  425  ll
-  426  jupyter notebook
-  427  docker ps
-  428  docker stop postgres-pgadmin
-  429  docker ps
-  430  docker ps -a
-  431  docker start b361e95e784f
-  432  docker ps -a
-  433  docker ps
-  434  docker start 29ceddeafdd8
-  435  docker ps
-  436  pgcli -h localhost -U root -d ny_taxi
-  437  URL=https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
-  438  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
-  439  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  440  ll
-  441  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
-  442  URL='https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
-  443  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
-  444  URL='https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/yellow/yellow_tripdata_2021-01.csv.gz'
-  445  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
-  446  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/yellow/yellow_tripdata_2021-01.csv.gz
-  447  ls
-  448  rm -rf yellow_tripdata_2021-01.csv.gz 
-  449  move yellow_tripdata_2021-01.csv yellow_tripdata_2021-01.csv_backup 
-  450  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
-  451  ls
-  452  rm -f yellow_tripdata_2021-01.csv.gz 
-  453  ls
-  454  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  455  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url= ${URL}
-  456  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  457  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  458  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  459  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  460  ls
-  461  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  462  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  463  ls
-  464  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz -O output.csv
-  465  ls
-  466  cat output.csv 
-  467  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  468  jupyter notebook
-  469  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  470  jupyter notebook
-  471  pgcli -h localhost -U root -d ny_taxi
-  472  cd
-  473  pgcli -h localhost -U root -d ny_taxi
-  474  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/
-  475  ls
-  476  rm -rf output.csv 
-  477  head -3 yellow_tripdata_2021-01.csv.bu 
-  478  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz -O output.csv.gz
-  479  ls
-  480  head -3 output.csv.gz 
-  481  clear
-  482  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  483  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  484  ls
-  485  rm -rf output.csv.gz 
-  486  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  487  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  488  ls
-  489  rem -rf output.csv.gz 
-  490  rm -rf output.csv.gz 
-  491  ls
-  492  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  493  docker ps
-  494  docker ps -a
-  495  docker start 29ceddeafdd8
-  496  docker start 9e6a4c574bc1
-  497  docker ps
-  498  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  499  ls
-  500  rm -f output.csv.gz 
-  501  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  502  pgcli -h localhost -U root -d ny_taxi
-  503  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  504  pgcli -h localhost -U root -d ny_taxi
-  505  python ingest_csv_data_to_postgres2.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  506  pgcli -h localhost -U root -d ny_taxi
-  507  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  508  pgcli -h localhost -U root -d ny_taxi
-  509  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  510  ls
-  511  ll
-  512  cd
-  513  ls
-  514  cd bin/
-  515  ll
-  516  cd ..
-  517  cd ny_taxi_postgres_data/
-  518  cd data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql
-  519  ls
-  520  cd ..
-  521  cd 2_docker_sql_jao/
-  522  ls
-  523  docker build - taxi_data_ingest:v001 .
-  524  docker build -t jao_taxi_data_ingest:v001 .
-  525  URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
-  526  python ingest_csv_data_to_postgres.py   --username=root   --password=root   --host=localhost   --port=5432   --database=ny_taxi   --tablename=yellow_taxi_data   --csv_url=${URL}
-  527  docker build -t test_jao .
-  528  ls
-  529  rm -rf output.csv.gz 
-  530  ls
-  531  docker ps
   532  cd .
   533  cd ..
   534  cd 2_docker_sql
@@ -996,5 +835,166 @@
  1366  docker ps
  1367  conda deactivate
  1368  docker ps
- 1369  pip list
- 1370  history > data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/history_cmds_03Feb.txt 
+ 1369  conda activate orchestration_jao
+ 1370  pip list
+ 1371  cd data-engineering-zoomcamp/week_2_workflow_orchestration/week2_orchestration_jao/
+ 1372  ll
+ 1373  prefectcd
+ 1374  cd
+ 1375  prefect orion start
+ 1376  prefect agent start -q default
+ 1377  prefect orion start
+ 1378  pip list
+ 1379  history > data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/history_cmds_03Feb.txt 
+ 1380  conda activate orchestration_jao
+ 1381  cd data-engineering-zoomcamp/week_2_workflow_orchestration/week2_orchestration_jao/
+ 1382  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1383  export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao-de-user.json
+ 1384  echo $GOOGLE_APPLICATION_CREDENTIALS
+ 1385  gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+ 1386  terraform init
+ 1387  cd ../../week_1_basics_n_setup/1_terraform_gcp_jao/
+ 1388  ll
+ 1389  terraform init
+ 1390  terraform plan -var="project=ny-rides-share-jao"
+ 1391  terraform apply -var="project=ny-rides-share-jao"
+ 1392  ll ../../week_2_workflow_orchestration/week2_orchestration_jao/
+ 1393  ll -h../../week_2_workflow_orchestration/week2_orchestration_jao/
+ 1394  ll -h ../../week_2_workflow_orchestration/week2_orchestration_jao/
+ 1395  ll -h ../../week_2_workflow_orchestration/week2_orchestration_jao/data/yellow/
+ 1396  ll
+ 1397  ll -h ../../week_2_workflow_orchestration/week2_orchestration_jao/data/yellow/yellow_tripdata_2021-01.parquet/data/yellow/yellow_tripdata_2021-01.parquet 
+ 1398  docker ps -a
+ 1399  rm -rf 0f041c2e7167
+ 1400  docker ps -a
+ 1401  rm -rf 3eff27b57bb9
+ 1402  docker ps -a
+ 1403  dcoker image l
+ 1404  dcoker image ls
+ 1405  docker image ls
+ 1406  docker image rm -f prefect_jao:dataeng_jao 
+ 1407  docker image ls
+ 1408  docker image rm -f prefect:dataeng_jao 
+ 1409  docker image ls
+ 1410  ll ~/.docker/
+ 1411  ll
+ 1412  mkdir .docker
+ 1413  ll
+ 1414  cd .docker/
+ 1415  ll
+ 1416  cd ..
+ 1417  rm -rf .docker/
+ 1418  docker login --username=jollie --email=j_ollivierre@yahoo.com
+ 1419  docker login --username=jollie
+ 1420  docker ps -a
+ 1421  conda activate orchestration_jao
+ 1422  prefect agent start -q default
+ 1423  conda activate orchestration_jao
+ 1424  cd week_2_workflow_orchestration/week2_orchestration_jao/
+ 1425  ll
+ 1426  cd week_2_workflow_orchestration/week2_orchestration_jao/wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+ 1427  wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz
+ 1428  gzip -d yellow_tripdata_2021-01.csv.gz 
+ 1429  python ./flows/02_gcp/etl_web_to_gcs.py 
+ 1430  python ./flows/02_gcp/etl_gcs_to_bigquery.py 
+ 1431  python ./flows/02_gcp/etl_web_to_gcs.py 
+ 1432  python ./flows/02_gcp/etl_gcs_to_bigquery.py 
+ 1433  python ./flows/03_parametization/etl_web_to_gcs_parametized.py 
+ 1434  python ./flows/02_gcp/etl_web_to_gcs.py 
+ 1435  python ./flows/03_parameterization/etl_web_to_gcs_parameterized.py 
+ 1436  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow "JAO Parameterized ETL"
+ 1437  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL"
+ 1438  ll
+ 1439  prefect apply etl_parent_flow-deployment.yaml
+ 1440  prefect deployment apply etl_parent_flow-deployment.yaml
+ 1441  prefect agent start  --work-queue "default"
+ 1442  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron" --cron "0 0 * * *" -a
+ 1443  prefect deployment ls
+ 1444  prefect deployment build --help
+ 1445  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron and Params" --cron "0 0 * * *"  --params='{"taxi_colour": "yellow", "year": 2021, "months": [1,2,3]}' -a
+ 1446  touch Dockerfile
+ 1447  docker ps
+ 1448  docker ps -a
+ 1449  docker image build -t prefect:dataeng_jao .
+ 1450  docker image push prefect:dataeng_jao
+ 1451  docker ps -a
+ 1452  docker image delete prefect:dataeng_jao
+ 1453  docker image prune prefect:dataeng_jao
+ 1454  docker ls
+ 1455  docker image ls
+ 1456  docker ps -a
+ 1457  docker ps -a
+ 1458  docker ls
+ 1459  docker image  rm 
+ 1460  docker image build -t prefect_jao:dataeng_jao .
+ 1461  docker ps -a
+ 1462  docker image rm -f prefect_jao:dataeng_jao
+ 1463  docker image build -t prefect_jao:dataeng_jao .
+ 1464  docker image rm -f prefect_jao:dataeng_jao
+ 1465  docker image build -t jollie/prefect_jao:dataeng_jao .
+ 1466  docker image push jollie/prefect_jao:dataeng_jao
+ 1467  docker ps -a
+ 1468  docker ls
+ 1469  docker image ls
+ 1470  python flows/03_parameterization/docker_deploy.py 
+ 1471  prefect profile ls
+ 1472  prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+ 1473  clear
+ 1474  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1475  conda activate orchestration_jao
+ 1476  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1477  prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+ 1478  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1479  conda activate orchestration_jao
+ 1480  prefect agent start -q default
+ 1481  conda activate orchestration_jao
+ 1482  prefect orion start
+ 1483  conda activate orchestration_jao
+ 1484  cd week_2_workflow_orchestration/week2_orchestration_jao/
+ 1485  ll
+ 1486* 
+ 1487  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1488  prefect agent start  --work-queue "default"
+ 1489  prefect profile ls
+ 1490  docker image rm -f jollie/prefect_jao:dataeng_jao
+ 1491  docker image build -t jollie/prefect_jao:dataeng_jao .
+ 1492  docker image push jollie/prefect_jao:dataeng_jao
+ 1493  python flows/03_parameterization/docker_deploy.py 
+ 1494  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1495  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron" --cron "0 0 * * *" -a
+ 1496  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron and Params" --cron "0 0 * * *"  --params='{"taxi_colour": "yellow", "year": 2021, "months": [1,2,3]}' -a
+ 1497  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron and Params" --params='{"taxi_colour": "yellow", "year": 2021, "months": [1,2,3]}' -a
+ 1498  prefect agent start  --work-queue "default"
+ 1499  prefect deployment build ./flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow -n "JAO Parameterized ETL Cron and Params" --cron "0 18 * * *"  --params='{"taxi_colour": "yellow", "year": 2021, "months": [1,2,3]}' -a
+ 1500  docker ps
+ 1501  docker ps -a
+ 1502  docker rm -f jollie/prefect_jao:dataeng_jao
+ 1503  docker image build -t jollie/prefect_jao:dataeng_jao .
+ 1504  docker image push jollie/prefect_jao:dataeng_jao
+ 1505  docker image --help
+ 1506  docker image rm jollie/prefect_jao:dataeng_jao
+ 1507  docker image ls
+ 1508  docker rmi cbed0cdeff25
+ 1509  docker image ls
+ 1510  docker rmi 25a87d01d622
+ 1511  docker rmi 3eff27b57bb9
+ 1512  docker image build -t jollie/prefect_jao:jao_dataeng .
+ 1513  docker image push jollie/prefect_jao:jao_dataeng
+ 1514  docker image ls
+ 1515  python flows/03_parameterization/docker_deploy.py 
+ 1516* 
+ 1517  prefect config set PREFECT_API_URL=http://127.0.0.1:4200/api
+ 1518  prefect deployment run ParentFlow -p "months=[1,2]"
+ 1519  /
+ 1520  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1521  python flows/03_parameterization/docker_deploy.py 
+ 1522  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1523  prefect block type ls
+ 1524  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1525  python flows/03_parameterization/docker_deploy.py 
+ 1526  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1527  python flows/03_parameterization/docker_deploy.py 
+ 1528  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2]"
+ 1529  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,6]"
+ 1530  prefect deployment run ParentFlow/docker-parameterized-flow -p "months=[1,2,3,4,5,6]"
+ 1531  history > ~/data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql_jao/history_cmds_04Feb.txt 

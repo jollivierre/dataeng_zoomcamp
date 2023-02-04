@@ -1,0 +1,65 @@
+###
+### A complete description of a Prefect Deployment for flow 'ParentFlow'
+###
+name: JAO Parameterized ETL Cron and Params
+description: null
+version: 18d3cd2342e199844baf667dd9df8f0c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+tags: []
+parameters:
+  taxi_colour: yellow
+  year: 2021
+  months:
+  - 1
+  - 2
+  - 3
+schedule:
+  cron: 0 18 * * *
+  timezone: null
+  day_or: true
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: ParentFlow
+manifest_path: null
+storage: null
+path: /home/jasono/data-engineering-zoomcamp/week_2_workflow_orchestration/week2_orchestration_jao
+entrypoint: flows/03_parameterization/etl_web_to_gcs_parameterized.py:etl_parent_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    taxi_colour:
+      title: taxi_colour
+      default: yellow
+      position: 0
+      type: string
+    year:
+      title: year
+      default: 2021
+      position: 1
+      type: integer
+    months:
+      title: months
+      default:
+      - 1
+      - 2
+      position: 2
+      type: array
+      items:
+        type: integer
+  required: null
+  definitions: null

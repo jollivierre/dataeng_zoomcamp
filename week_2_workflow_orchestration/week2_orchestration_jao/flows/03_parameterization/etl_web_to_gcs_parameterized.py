@@ -2,12 +2,14 @@
 
 from pathlib import Path 
 import pandas as pd
-import os
 from prefect import flow, task
 from prefect_gcp.cloud_storage import GcsBucket
+from prefect.tasks import task_input_hash
 
 
-@task()                                                                 # decorators which captures infor in prefect.  if excluded then no data in prefect
+
+
+@task(retries=3)                                                    # decorators which captures infor in prefect.  if excluded then no data in prefect
 def fetch(dataset_url: str) -> pd.DataFrame:                            #dtype being returned DataFrame, Path, None.....
     """Read data from web into pandas DataFrame"""
     
@@ -41,22 +43,16 @@ def write_gcs(path: Path) -> None:
     return 
 
 
-@task()
-def delete_local(path: Path) -> None:
-    """Delete local parquet file"""
-
-    os.remove(f"{path}")
-    return
 
 
-# main flow
-@flow()
-def etl_web_to_gcs() -> None:           #  "--> None means no arguments"
+
+@flow(name="SubFlow01")
+def etl_web_to_gcs(taxi_colour:str, year: int, month: int) -> None:           #  "--> None means no arguments"
     """The main ETL function"""         # example of docstring
     # hardcoding variables for now
-    taxi_colour = "yellow"
-    year = 2021
-    month = 1
+    # taxi_colour = "yellow"
+    # year = 2021
+    # month = 1
     dataset_file = f"{taxi_colour}_tripdata_{year}-{month:02}"          # yyellow_tripdata_2021-01.csv.gz
     dataset_url = f"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{taxi_colour}/{dataset_file}.csv.gz"
 
@@ -64,14 +60,27 @@ def etl_web_to_gcs() -> None:           #  "--> None means no arguments"
     df_clean = clean(df_fetch)
     local_path = write_local(df_clean, taxi_colour, dataset_file)
     write_gcs(local_path)
-    delete_local(local_path)
 
+
+# parent flow to trigger the above flow for three months
+@flow(name="ParentFlow")
+def etl_parent_flow(
+    taxi_colour: str = "yellow",
+    year: int = 2021, 
+    months: list[int] = [1,2]
+):
+
+    for month in months:
+        etl_web_to_gcs(taxi_colour, year, month)
 
 
 
 #main method
 if __name__ == '__main__':
-    etl_web_to_gcs()
+    taxi_colour = "yellow"
+    year = 2021
+    months = [1,2,3]
+    etl_parent_flow(taxi_colour, year, months)
 
 
 
