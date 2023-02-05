@@ -37,10 +37,10 @@ def clean(df = pd.DataFrame) -> pd.DataFrame:
 @task(log_prints=True)
 def write_local(df: pd.DataFrame, taxi_colour: str, dataset_file: str) -> Path:
     """Write DataFrame out locally as a parquet file"""
-    print("start of failure")
-    path = Path(f"data/{taxi_colour}/{dataset_file}.parquet")
+
+    path = Path(f"week_2_workflow_orchestration/week2_orchestration_jao/data/{taxi_colour}/{dataset_file}.parquet")
     df.to_parquet(path, compression="gzip")                     # pyarrow for gzip updated JAO
-    print("end of failure")
+
     return path
 
 @task()
