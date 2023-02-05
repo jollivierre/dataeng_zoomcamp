@@ -23,4 +23,11 @@ if __name__ == '__main__':
 # run on command line using $python <path_to>/docker_deploy.py
 
 
-#prefect deployment build ./flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -n "JAO_Homework_GitHubBlock_ETL" -sb github/jao-dataeng-github -q default -a
+#prefect deployment build week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -n "JAO_Homework_GitHubBlock_ETL" -sb github/jao-dataeng-github -q default -a
+
+
+#prefect deployment build -n "JAO_Homework_GitHubBlock_ETL" -sb github/jao-dataeng-github ./week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -q default -a
+
+#build the deployment from CLI:
+#prefect deployment build -n etl_github -sb github/github-prefect-storage  ./path/to/your_flow/etl_web_to_gcs.py:etl_web_to_gcs
+#so when you specify github block for storage (-sb), your path to flow is not local path but path from the root of your repo. As simple as that (e
