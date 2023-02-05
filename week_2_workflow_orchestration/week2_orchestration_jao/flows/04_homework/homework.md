@@ -88,11 +88,15 @@ How many rows were processed by the script?
 - 88,605
 - 190,225
 
+
+## Answer 4
 GitHub Block URL - https://github.com/jollivierre/dataeng_zoomcamp.git
 
-$prefect deployment build week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -n "JAO_Homework_GitHubBlock_ETL" -sb github/jao-dataeng-github -q default -a
+$prefect deployment build ./week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -n JAO_Homework_GitHubBlock_ETL -sb github/jao-dataeng-github -q default -a
 
 $prefect run etl-web-to-gcs/JAO_Homework_GitHubBlock_ETL
+
+23:13:44.471 | INFO    | Task run 'clean-2c6af9f6-0' - rows: 88605
 
 
 
@@ -126,6 +130,15 @@ How many rows were processed by the script?
 - `514,392`
 
 
+## Answer 5
+
+app.prefect.cloud - did not understand how to show my deployments here. more reading!!
+
+
+
+
+
+
 ## Question 6. Secrets
 
 Prefect Secret blocks provide secure, encrypted storage in the database and obfuscation in the UI. Create a secret block in the UI that stores a fake 10-digit password to connect to a third-party service. Once you’ve created your block in the UI, how many characters are shown as asterisks (*) on the next page of the UI?
@@ -134,6 +147,12 @@ Prefect Secret blocks provide secure, encrypted storage in the database and obfu
 - 6
 - 8
 - 10
+
+
+## Answer 6
+
+8
+
 
 
 ## Submitting the solutions

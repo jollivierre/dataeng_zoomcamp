@@ -65,8 +65,8 @@ def etl_web_to_gcs() -> None:           #  "--> None means no arguments"
     """The main ETL function"""         # example of docstring
     # hardcoding variables for now
     taxi_colour = "green"
-    year = 2020
-    month = 11
+    year = 2019
+    month = 4
     dataset_file = f"{taxi_colour}_tripdata_{year}-{month:02}"          # yyellow_tripdata_2021-01.csv.gz
     dataset_url = f"https://github.com/DataTalksClub/nyc-tlc-data/releases/download/{taxi_colour}/{dataset_file}.csv.gz"
 
