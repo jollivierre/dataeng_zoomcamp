@@ -38,7 +38,7 @@ def clean(df = pd.DataFrame) -> pd.DataFrame:
 def write_local(df: pd.DataFrame, taxi_colour: str, dataset_file: str) -> Path:
     """Write DataFrame out locally as a parquet file"""
     print("start of failure")
-    path = Path(f"week_2_workflow_orchestration/week2_orchestration_jao/data/{taxi_colour}/{dataset_file}.parquet")
+    path = Path(f"data/{taxi_colour}/{dataset_file}.parquet")
     df.to_parquet(path, compression="gzip")                     # pyarrow for gzip updated JAO
     print("end of failure")
     return path
@@ -51,12 +51,12 @@ def write_gcs(path: Path) -> None:
     return 
 
 
-#@task()
-#def delete_local(path: Path) -> None:
-#    """Delete local parquet file"""
+@task()
+def delete_local(path: Path) -> None:
+   """Delete local parquet file"""
 
-#    os.remove(f"{path}")
-#    return
+   os.remove(f"{path}")
+   return
 
 
 # main flow
@@ -74,7 +74,7 @@ def etl_web_to_gcs() -> None:           #  "--> None means no arguments"
     df_clean = clean(df_fetch)
     local_path = write_local(df_clean, taxi_colour, dataset_file)
     write_gcs(local_path)
-  #  delete_local(local_path)
+    delete_local(local_path)
 
 
 
