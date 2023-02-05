@@ -138,10 +138,16 @@ I removed this from the block and pasted the .json file into the option "Service
 
 
 ---to start
-conda activate orchestration_jao
+start vm on gcp
+update ssh config
+conda activate orchestration_jao (each app)
+
 echo $GOOGLE_APPLICATION_CREDENTIALS
 export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/ny-rides-share-jao-de-user.json
 gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+
+run terraform (projectid - ny-rides-share-jao)
+
 prefect orion start
 prefect agent start -q "default"
 python flows/03_parameterization/docker_deploy.py       # is the flow is not deployed or to redeploy
