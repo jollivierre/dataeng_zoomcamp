@@ -17,4 +17,5 @@ serving_dir
 !week_6_stream_processing/avro_example/data/rides.csv
 **/pgadmin_data/*
 **yellow_tripdata_2021-01.csv*
-!week_2_workflow_orchestration/week2_orchestration_jao/data/*
+**.parquet*
+**.parquet*

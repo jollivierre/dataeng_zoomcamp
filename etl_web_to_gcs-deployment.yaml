@@ -27,7 +27,7 @@ infrastructure:
 flow_name: etl-web-to-gcs
 manifest_path: null
 storage:
-  repository: https://github.com/jollivierre/dataeng_zoomcamp/blob/main/week_2_workflow_orchestration/week2_orchestration_jao
+  repository: https://github.com/jollivierre/dataeng_zoomcamp/main/week_2_workflow_orchestration/week2_orchestration_jao
   reference: null
   access_token: null
   _block_document_id: ec83df7f-7df6-4c99-942e-9db6c6e28770
@@ -36,7 +36,7 @@ storage:
   block_type_slug: github
   _block_type_slug: github
 path: ''
-entrypoint: flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs
+entrypoint: week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs
 parameter_openapi_schema:
   title: Parameters
   type: object

@@ -88,6 +88,13 @@ How many rows were processed by the script?
 - 88,605
 - 190,225
 
+GitHub Block URL - https://github.com/jollivierre/dataeng_zoomcamp.git
+
+$prefect deployment build week_2_workflow_orchestration/week2_orchestration_jao/flows/04_homework/etl_web_to_gcs.py:etl_web_to_gcs -n "JAO_Homework_GitHubBlock_ETL" -sb github/jao-dataeng-github -q default -a
+
+$prefect run etl-web-to-gcs/JAO_Homework_GitHubBlock_ETL
+
+
 
 
 ## Question 5. Email or Slack notifications
