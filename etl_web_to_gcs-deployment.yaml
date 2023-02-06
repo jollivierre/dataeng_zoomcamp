@@ -3,10 +3,11 @@
 ###
 name: JAO_Homework_GitHubBlock_ETL
 description: The main ETL function
-version: dc8290bdd148048cabd822b29301ae4f
+version: 3e5f012794bb885c0f06f96a60767198
 # The work queue that will handle this deployment's runs
 work_queue_name: default
-tags: []
+tags:
+- JAO_Homework_GitHubBlock_ETL
 parameters: {}
 schedule: null
 infra_overrides: {}

@@ -96,6 +96,16 @@ $prefect deployment build ./week_2_workflow_orchestration/week2_orchestration_ja
 
 $prefect run etl-web-to-gcs/JAO_Homework_GitHubBlock_ETL
 
+JAO_Notifications
+APP  12:15 AM
+Prefect flow run notification
+Flow run etl-web-to-gcs/unique-urchin entered state Completed at 2023-02-06T00:15:38.248230+00:00.
+Flow ID: 6a172f70-52ad-4eba-a338-f69beb605d24
+Flow run ID: f3a78ac9-7c6c-4e52-a445-825ce3a0f80e
+Flow run URL: http://127.0.0.1:4200/flow-runs/flow-run/f3a78ac9-7c6c-4e52-a445-825ce3a0f80e
+State message: All states completed.
+Prefect Notifications | Today at 12:15 AM
+
 23:13:44.471 | INFO    | Task run 'clean-2c6af9f6-0' - rows: 88605
 
 
@@ -134,6 +144,11 @@ How many rows were processed by the script?
 
 app.prefect.cloud - did not understand how to show my deployments here. more reading!!
 
+https://api.slack.com/messaging/webhooks - followed instructions here
+
+
+
+23:42:19.359 | INFO    | Task run 'clean-2c6af9f6-0' - rows: 514392
 
 
 
