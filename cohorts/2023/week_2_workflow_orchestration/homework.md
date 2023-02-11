@@ -114,4 +114,5 @@ Deadline: 6 February (Monday), 22:00 CET
 
 ## Solution
 
-We will publish the solution here
+* Video: https://youtu.be/L04lvYqNlc0
+* Code: TBA
