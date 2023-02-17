@@ -13,6 +13,18 @@ def fetch(dataset_url: str) -> pd.DataFrame:                            #dtype b
     """Read data from web into pandas DataFrame"""
     
     df = pd.read_csv(dataset_url)
+    if 'tpep_pickup_datetime' in df.columns:
+        df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+    if 'tpep_dropoff_datetime' in df.columns:
+        df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+    if 'lpep_pickup_datetime' in df.columns:
+        df.lpep_pickup_datetime = pd.to_datetime(df.lpep_pickup_datetime)
+    if 'lpep_dropoff_datetime' in df.columns:
+        df.lpep_dropoff_datetime = pd.to_datetime(df.lpep_dropoff_datetime)
+    if 'PUlocationID' in df.columns:
+        df["PUlocationID"] = df["PUlocationID"].astype(float)
+    if 'DOlocationID' in df.columns:
+        df["DOlocationID"] = df["PUlocationID"].astype(float)
     return df
 
 @task(log_prints=True)

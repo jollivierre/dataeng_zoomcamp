@@ -115,4 +115,4 @@ Deadline: 6 February (Monday), 22:00 CET
 ## Solution
 
 * Video: https://youtu.be/L04lvYqNlc0
-* Code: TBA
+* Code: https://github.com/discdiver/prefect-zoomcamp/tree/main/flows/04_homework
