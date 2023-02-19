@@ -35,3 +35,10 @@ models:
   ny_rides_share_jao:
     # Applies to all files under models/example/
 
+
+seeds:
+  ny_rides_share_jao:
+    taxi_zone_lookup:
+      +column_types:
+        LocationID: numeric     ##columns not defined, the default will be taken
+
