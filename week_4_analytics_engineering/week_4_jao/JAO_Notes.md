@@ -33,3 +33,49 @@ prefect deployment build  ./flows/05_week4_homework/etl_gcs_to_bigquery.py:etl_p
  prefect deployment run ParentFlow_etl_gcs_to_bigquery/JAO_Homework_Week4 --params '{"taxi_colour":"fhv", "year":2019, "months":[1,2,3,4,5,6]}'
 
  prefect deployment run ParentFlow_etl_gcs_to_bigquery/JAO_Homework_Week4 --params '{"taxi_colour":"fhv", "year":2019, "months":[7,8,9,10,11,12]}'
+
+
+
+
+
+ ---
+ dbt run - runs all models
+ dbt run -m <model_name> - rund specific model
+
+ create a macro in dbt (same as function) - as .sql file in macros folder
+
+can use packages from dbt package hub (https://hub.getdbt.com/)
+packages are imported into a created "packages.yml" (in main directory of project) file by running "dbt debs"
+this creates a folder "dbt_packages", if not already present
+under this it adds the packages installed 
+
+
+any model run - user can look at the code actually sent to server in --> target/compiled
+
+
+varibales can be used like any other program
+- in the project.yml it will be a global variable
+
+- variable can also be defined in the CLI to change at run time
+e.g. dbt run -m stg_green_tripdata --var 'is_test_run: false'
+
+
+---in dbt "seeds" are csv files that are in repo.  smaller files with data that will not change frequently
+--in this case we want to look at zones
+-- added to "seeds" folder
+need to run command "dbt seed" -->  this will create table based on csv
+
+--config of seeds can be added to dbt_project.yml
+--columns can be defined
+
+-- "dbt seed --full-refresh" --> will drop the table and recreate.  without arugment it will append
+
+
+
+--expectation is the "core" folder will be "presentation" layer, thus "tables" should be created
+--created a "dim_zones" -- -this is from teh csv
+--created a "fact_trips" -- - this is from the two models (yellow and green)
+
+
+another way to run model and all dependencies (dbt run --select +fact_trips)
+
