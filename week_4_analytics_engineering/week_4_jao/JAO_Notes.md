@@ -77,5 +77,34 @@ need to run command "dbt seed" -->  this will create table based on csv
 --created a "fact_trips" -- - this is from the two models (yellow and green)
 
 
-another way to run model and all dependencies (dbt run --select +fact_trips)
 
+
+--to run seeds and models
+dbt build 
+
+another way to run model and all dependencies - the "+" sign includes dependencies
+dbt build --select +fact_trips
+
+
+
+***testing and documentation*** added to schema.sql related model folder
+unique
+not null
+accepted values
+foreign key
+--custom test in the form of a sql query
+
+
+dbt provides a way to generate documentation and render to website
+
+included in schema.yml for "staging" folder is an example of "accepted values" test for payment_types using a variable which is defined in dbt_project.yml
+--done this way because test applies to both "green" and "yellow" data
+--"quote: false" is added to test to accept as chars
+
+
+command to run test by model, or by test_name(if known)
+dbt test
+
+
+
+**seeds and macros can also be documented
