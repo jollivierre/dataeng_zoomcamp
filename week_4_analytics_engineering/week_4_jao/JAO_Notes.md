@@ -108,3 +108,10 @@ dbt test
 
 
 **seeds and macros can also be documented
+
+
+
+--deploy dbt project
+* create job 
+* add as many commnads to job
+* can create schedule for job
