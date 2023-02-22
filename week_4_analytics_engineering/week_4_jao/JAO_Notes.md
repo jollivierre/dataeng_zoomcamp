@@ -115,3 +115,9 @@ dbt test
 * create job 
 * add as many commnads to job
 * can create schedule for job
+
+
+--jobs commnads
+dbt seed
+dbt run --var 'is_test_run: false'
+dbt test
