@@ -13,6 +13,7 @@
 
 
 -run via job
+-- needed to merge changes into repo before job ran with two new models???
 
 
 
@@ -47,7 +48,7 @@ You should find the views and models for querying in your DWH.
 
 - 41648442
 - 51648442
-- 61648442
+- 61648442  --- closest anwser 61598294
 - 71648442
 
 
@@ -57,7 +58,7 @@ You should find the views and models for querying in your DWH.
 
 You will need to complete "Visualising the data" videos, either using [google data studio](https://www.youtube.com/watch?v=39nLTs74A3E) or [metabase](https://www.youtube.com/watch?v=BnLkrA7a6gM). 
 
-- 89.9/10.1
+- 89.9/10.1         --closest 89.8/10.15
 - 94/6
 - 76.3/23.7
 - 99.1/0.9
@@ -71,7 +72,7 @@ You will need to complete "Visualising the data" videos, either using [google da
 Create a staging model for the fhv data for 2019 and do not add a deduplication step. Run it via the CLI without limits (is_test_run: false).
 Filter records with pickup time in year 2019.
 
-- 33244696
+- 33244696          -- got 37186367
 - 43244696
 - 53244696
 - 63244696
