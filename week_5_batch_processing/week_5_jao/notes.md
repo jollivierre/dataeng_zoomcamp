@@ -56,3 +56,22 @@ StructType([
     StructField('DOLocationID', IntegerType(), True), 
     StructField('SR_Flag', DoubleType(), True)
 ])
+
+
+
+
+---5_3_2: SPark dataframes
+
+there are "actions" and " transformations" in spark
+
+transformations - lazy (not executed immediately)
+-select columns
+-filtering
+-joins
+-group by
+
+
+actions - eager (executed immediately)
+-show, take, head
+-write
+
