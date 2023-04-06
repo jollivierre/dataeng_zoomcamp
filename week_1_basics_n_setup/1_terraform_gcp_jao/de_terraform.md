@@ -1,3 +1,5 @@
+--added comment
+
 Creating two resources in google environment (GCP):
 
 1) Google Cloud Storage (GCS): Data Lake (as referred to in course)
